@@ -7,7 +7,19 @@ import numpy as np
 # Maths StackExchange: https://math.stackexchange.com/questions/2001505/quick-way-to-check-if-a-matrix-is-diagonalizable/2001527#:~:text=A%20matrix%20is%20diagonalizable%20if,quickly%20identify%20those%20as%20diagonizable.
 
 # Inputting the square matrix
-matrix = np.array([[1,2],[3,1]])
+# matrix = np.array(
+#     [
+#         [4,2],
+#         [3,3]
+#     ]
+#     )
+matrix = np.array(
+    [
+        [3,2,4],
+        [2,0,2],
+        [4,2,3]
+    ]
+    )
 
 
 class Diagonalizable:
@@ -35,9 +47,17 @@ class Diagonalizable:
     def check_diagonalizable(self):
         # Checking if the matrix is diagonalizable
         eigenValue, eigenVector = self.getEigenStuff()
+        print("Eigen Value: ", eigenValue)
+        print("Eigen Vector: ", eigenVector)
+        print(set(eigenValue))
 
-        print("Eigenvalues: ", eigenValue)
-        print("Eigenvectors: ", eigenVector)
+        # Check if all the eigenvalues are unique
+        if len(eigenValue) == len(set(eigenValue)):
+            return True
+        else:
+            return False
+        
+                
 
 diagonalizable = Diagonalizable(matrix)
 print(diagonalizable.check_diagonalizable())
