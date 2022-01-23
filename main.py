@@ -1,7 +1,6 @@
 # A program to check if a matrix is diagonalizble or not
 
 # Importing the libraries
-from traceback import print_tb
 import numpy as np
 
 # Maths StackExchange: https://math.stackexchange.com/questions/2001505/quick-way-to-check-if-a-matrix-is-diagonalizable/2001527#:~:text=A%20matrix%20is%20diagonalizable%20if,quickly%20identify%20those%20as%20diagonizable.
@@ -49,13 +48,13 @@ class Diagonalizable:
         eigenValue, eigenVector = self.getEigenStuff()
         print("Eigen Value: ", eigenValue)
         print("Eigen Vector: ", eigenVector)
-        print(set(eigenValue))
+        print(set(eigenValue),'\n')
 
         # Check if all the eigenvalues are unique
         if len(eigenValue) == len(set(eigenValue)):
-            return True
+            return "Diagonalizable"
         else:
-            return False
+            return "Not Diagonalizable"
         
                 
 
