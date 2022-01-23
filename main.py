@@ -1,17 +1,15 @@
-# A program to check if a matrix is diagonalizble or not
+# pylint: disable=missing-module-docstring
+# 
+# Copyright (C) 2022 by YadavGulshan@Github, < https://github.com/YadavGulshan >.
+#
+# This file is part of < https://github.com/Yadavgulshan/PharmaServiceBackend > project,
+# and is released under the "GNU v3.0 License Agreement".
+# Please see < https://github.com/YadavGulshan/diagonalizable/blob/master/LICENCE >
+#
+# All rights reserved.
 
-# Importing the libraries
 import numpy as np
 
-# Maths StackExchange: https://math.stackexchange.com/questions/2001505/quick-way-to-check-if-a-matrix-is-diagonalizable/2001527#:~:text=A%20matrix%20is%20diagonalizable%20if,quickly%20identify%20those%20as%20diagonizable.
-
-# Inputting the square matrix
-# matrix = np.array(
-#     [
-#         [4,2],
-#         [3,3]
-#     ]
-#     )
 matrix = np.array(
     [
         [3,2,4],
