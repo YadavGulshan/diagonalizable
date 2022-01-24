@@ -9,6 +9,7 @@
 # All rights reserved.
 
 import numpy as np
+import os
 
 matrix = np.array(
     [
@@ -26,7 +27,10 @@ class Diagonalizable:
 
     def check_diagonalizable_square(self):
         # Checking if the matrix is square
-        if self.matrix.shape[0] == self.matrix.shape[1]:
+        print("Making required checks!!")
+        print("please wait...")
+        if all(i==self.matrix.shape[0] for i in self.matrix.shape):
+            os.system('clear')
             return True
         else:
             return False
@@ -45,7 +49,7 @@ class Diagonalizable:
         # Checking if the matrix is diagonalizable
         eigenValue, eigenVector = self.getEigenStuff()
         print("Eigen Value: ", eigenValue)
-        print(eigenVector)
+        print("Eigen Vector: \n",eigenVector)
         print(set(eigenValue), '\n')
 
         # Check if all the eigenvalues are unique and real
